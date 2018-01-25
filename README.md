@@ -1,2 +1,2 @@
 # working-with-github
-Playing around with GitHub
+Playing around with GitHub and services.
