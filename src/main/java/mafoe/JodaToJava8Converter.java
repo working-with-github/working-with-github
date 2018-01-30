@@ -1,6 +1,7 @@
 package mafoe;
 
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 import java.time.ZoneId;
 
@@ -23,5 +24,13 @@ public class JodaToJava8Converter {
                 jodaDateTime.getSecondOfMinute(),
                 jodaDateTime.getMillisOfSecond() * 1000 * 1000,
                 ZoneId.of(zoneId));
+    }
+
+    public static java.time.LocalDate convertLocalDate(LocalDate jodaLocalDate) {
+
+        return java.time.LocalDate.of(
+                jodaLocalDate.getYear(),
+                jodaLocalDate.getMonthOfYear(),
+                jodaLocalDate.getDayOfMonth());
     }
 }
